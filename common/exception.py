@@ -111,4 +111,5 @@ def valid_answer(ans) :
     re_ans = input('다시 입력해주세요: ')
     return valid_answer(re_ans)
   else :
-    pass
+    return re_ans
+
