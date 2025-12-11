@@ -60,14 +60,9 @@ class Fight(character.Character):
             self.hero_attack()
 
             if self.monster.hp <= 0:
-                self.hero.levelup()
-                print(f"\n승리!, 레벨 1 상승\n ")
+                print(f"\n승리!")
                 print()
                 time.sleep(1)
-                print(f'공격력 10 상승!')
-                time.sleep(1)
-                print(f'체력 100 상승!')
-                # self.hero.hp = 100 * character.Character.levelhp
                 break
 
             self.monster_attack()
@@ -84,5 +79,6 @@ class Fight(character.Character):
                 print('남은 라이프 {}'.format(self.hero.life))
                 # self.hero.hp =100 * character.Character.levelhp
                 break
+
 
             turn += 1
