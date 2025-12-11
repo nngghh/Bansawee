@@ -76,12 +76,13 @@ class Fight(character.Character):
                 print('\n라이프 1 감소')
                 time.sleep(1.5)
                 self.hero.life_down()
-                print('남은 라이프 {}'.format(self.hero.life))
+                print('남은 라이프 {}'.format(self.hero.player.life))
                 # self.hero.hp =100 * character.Character.levelhp
                 break
 
 
             turn += 1
+
 
 
 
