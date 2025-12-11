@@ -73,7 +73,7 @@ class MinigameEvent(event.Event):
     for turn in range(1,11):
       time.sleep(0.5)
       guess = input("[{}턴]\n세자리 숫자를 맞춰보세요: ".format(turn))
-      exception.valid_item(guess)
+      guess = int(exception.valid_item(guess))
       while len(guess) != 3:       guess = input("세 자리인 숫자를 입력해주세요: ")
       strikes, balls = 0, 0
       for i in range(3):
@@ -119,6 +119,7 @@ class MinigameEvent(event.Event):
   def get_display_name(self):
 
     return '[🕹️미니게임🕹️]'
+
 
 
 
