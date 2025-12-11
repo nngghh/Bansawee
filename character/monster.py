@@ -11,7 +11,7 @@ class Monster(character.Character):
       self.hp = int((self.hp * scale))
       self.ap = int(self.ap * scale)
       if mon_name == '스톤 골렘':
-        self.hp=self.hp * 3
+        self.hp=self.hp * 2
       elif mon_name =='오크 전사':
         self.hp*=2
         self.ap*=1.5
@@ -19,8 +19,8 @@ class Monster(character.Character):
         self.hp*=0.9
         self.ap*=1.4
       elif mon_name =='드래곤':
-        self.ap*=3
-        self.hp*=3
+        self.ap*=1.575
+        self.hp*=2.15
   @classmethod
   def make_char(cls,mon_name):
 
