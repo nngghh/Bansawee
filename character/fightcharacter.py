@@ -2,7 +2,7 @@ from character.character import Character
 from common import play
 class FightCharacter(Character):
   def __init__(self, roll, player, used_item):
-    super().__init__(char_name)
+    self.player = player
     self.hp = player.hp
     self.ap = player.ap
     self.char_name = player.char_name
@@ -28,9 +28,9 @@ class FightCharacter(Character):
 
         self.hp += self.roll * 10
         self.ap += self.roll * 2
-  def minus_life(self) :
-    self.life -= 1
-    return self.life
+  def life_down(self) :
+    self.player.life -= 1
+
 
 
 
