@@ -40,8 +40,9 @@ class BattleEvent(event.Event):
         print(f'나온 숫자 {fight_num}만큼 공격력과 체력이 증가합니다!')
 
     p_n, p_h, p_a, p_l, p_i = player.char_name, player.hp, player.ap, player.life, player.acquired_item
-    fightchar = fightcharacter.FightCharacter(fight_num,p_n,p_h,p_a,p_l,used_item,p_i)
+    fightchar = fightcharacter.FightCharacter(fight_num,p_n,p_h,p_a,p_l,used_item,p_i,player.life)
     game = fight.Fight(fightchar, selected_monster)
     game.battle()
   def get_display_name(self):
+
     return '[ ⚔️ 전투 ⚔️ ]'
