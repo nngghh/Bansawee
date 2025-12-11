@@ -148,23 +148,24 @@ class BossFight(character.Character):
 
             if self.hero.hp <= 0:
                 print(f"전투 패배..")
-                self.hero.life -= 1
-                if self.hero.life < 0  :
+                self.hero.life_down()
+                if self.hero.player.life < 0  :
                     print('\n남은 라이프가 없습니다.')
                     time.sleep(2.5)
                     print('모험을 실패하였습니다.')
-                if self.hero.life > 0 :
+                if self.hero.player.life > 0 :
                     time.sleep(2.5)
                     print('\n?? : 젊은 모험가여.. 이왕 여기까지 온 거 라이프는 다 써야하지 않겠나?')
                     time.sleep(2.5)
                     print('\n?? : 그대신 재도전은 한 번 뿐이라네.. 잘 해보시게나..')
                     time.sleep(2.5)
-                    self.hero.life = 0 
-                    self.hero.hp = h_hp
-                    self.hero.ap = h_ap
+                    self.hero.player.life = 0 
+                    self.hero.hp = self.hero.player.max_hp
+                    self.hero.ap = a_ap
                     bossevent.BossEvent.start(self.hero)
             
                 break
 
 
             turn += 1
+
