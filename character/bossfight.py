@@ -101,9 +101,10 @@ class BossFight(character.Character):
 
 
     def battle(self):
+        print(self.hero.player.life)
         time.sleep(3)
         h_hp = self.hero.hp
-        h_ap = self.hero.ap
+        a_ap = self.hero.ap
         print("\n===== 전투 시작 =====")
         print(f"{self.hero.char_name}        vs         {self.monster.char_name}")
         print(f'공격력 - {self.hero.ap}           공격력 - {self.monster.ap}')
@@ -149,7 +150,7 @@ class BossFight(character.Character):
             if self.hero.hp <= 0:
                 print(f"전투 패배..")
                 self.hero.life_down()
-                if self.hero.player.life < 0  :
+                if self.hero.player.life <= 0  :
                     print('\n남은 라이프가 없습니다.')
                     time.sleep(2.5)
                     print('모험을 실패하였습니다.')
@@ -159,7 +160,13 @@ class BossFight(character.Character):
                     time.sleep(2.5)
                     print('\n?? : 그대신 재도전은 한 번 뿐이라네.. 잘 해보시게나..')
                     time.sleep(2.5)
-                    self.hero.player.life = 0 
+                    self.hero.life_down()
+                    self.hero.life_down()
+                    self.hero.life_down()
+                    self.hero.life_down()
+                    self.hero.life_down()
+                    self.hero.life = self.hero.player.life
+                    print(self.hero.player.life)
                     self.hero.hp = self.hero.player.max_hp
                     self.hero.ap = a_ap
                     bossevent.BossEvent.start(self.hero)
