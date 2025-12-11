@@ -17,7 +17,7 @@ class FightCharacter(Character):
         self.ap += self.roll * 2
       elif self.roll <= 9 :
         self.hp -= n[self.roll] * 10 * 0.25
-        self.ap -= n[self.roll] * 2 * 0.5
+        self.ap -= n[self.roll] * 2 * 0.25
     
     else :
       a = {1:6,2:5,0:6}
@@ -30,6 +30,7 @@ class FightCharacter(Character):
         self.ap += self.roll * 2
   def life_down(self) :
     self.player.life -= 1
+
 
 
 
