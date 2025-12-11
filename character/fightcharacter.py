@@ -10,7 +10,7 @@ class FightCharacter(Character):
     self.used_item = used_item
     self.roll = roll
     self.acquired_item = acquired_item
-    n = {9:12,8:13,7:14,6:15,5:16,4:17,3:18,2:19,1:20}
+    n = {9:12,8:13,7:14,6:15,5:16,4:17,3:18,2:19,1:20,0:20}
     if self.used_item == '특별 20면 주사위' :
       if self.roll >= 11 :
         self.hp += self.roll * 10
@@ -29,5 +29,6 @@ class FightCharacter(Character):
 
         self.hp += self.roll * 10
         self.ap += self.roll * 2
+
 
 
