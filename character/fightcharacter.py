@@ -25,10 +25,14 @@ class FightCharacter(Character):
         self.hp -= a[self.roll] * 10
         self.ap -= a[self.roll]* 2 * 0.5
 
+  def minus_life(self) :
+    self.life -= 1
+    return self.life
       elif roll >=4:
 
         self.hp += self.roll * 10
         self.ap += self.roll * 2
+
 
 
 
