@@ -18,7 +18,7 @@ class FightCharacter(Character):
       elif self.roll <= 9 :
         self.hp -= n[self.roll] * 10 * 0.25
         self.ap -= n[self.roll] * 2 * 0.5
-      
+    
     else :
       a = {1:6,2:5}
       if self.roll <=2:
@@ -29,3 +29,4 @@ class FightCharacter(Character):
 
         self.hp += self.roll * 10
         self.ap += self.roll * 2
+
