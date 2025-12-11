@@ -17,9 +17,9 @@ class MinigameEvent(event.Event):
         if player.life == 5 :print('최대 추가 라이프 5를 넘을 수 없습니다.')
         elif player.life < 5 :
           player.life += 1
-          if player.life <3 :
+          if player.life <=3 :
             print('라이프가 1 회복되었습니다!')
-          elif player.life == 3 :
+          elif player.life > 3 :
             print('추가 라이프 1 회복되었습니다!')
       elif self.game in ['숫자 야구', '업다운']:
         ran_item = random.choice([i for i in item.Item.item_dic.keys()])
@@ -115,4 +115,5 @@ class MinigameEvent(event.Event):
       self.up_down()
 
   def get_display_name(self):
+
     return '[🕹️미니게임🕹️]'
