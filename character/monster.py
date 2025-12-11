@@ -3,7 +3,7 @@ import random
 class Monster(character.Character):
   @staticmethod
   def get_random_scale():
-    return random.randrange(90,111) * 0.01
+    return random.randrange(90,111) * 0.1
 
   def __init__(self, mon_name):
       super().__init__(mon_name)
@@ -18,9 +18,10 @@ class Monster(character.Character):
       elif mon_name =='불의 정령':
         self.hp*=0.9
         self.ap*=1.4
-      elif mon_name =='드레곤':
-        self.ap*=2
-        self.hp*=2
+      elif mon_name =='드래곤':
+        self.ap*=3
+        self.hp*=3
   @classmethod
   def make_char(cls,mon_name):
+
     return cls(mon_name)
