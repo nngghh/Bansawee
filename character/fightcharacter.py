@@ -29,6 +29,3 @@ class FightCharacter(Character):
 
         self.hp += self.roll * 10
         self.ap += self.roll * 2
-  def levelup(self):
-    self.level += 1
-    super().__init__(self, self.char_name)
