@@ -16,7 +16,7 @@ class Board:
     [섞은 전투 칸, 아이템 칸, 빈칸에 보스 칸까지 추가]"""
     total = row * col
     event_list = []
-    tile = [battleevent.BattleEvent(),battleevent.BattleEvent(),itemevent.ItemEvent(), itemevent.ItemEvent(), noevent.NoEvent(),minigameevent.MinigameEvent()]
+    tile = [battleevent.BattleEvent(),battleevent.BattleEvent(),battleevent.BattleEvent(),itemevent.ItemEvent(), itemevent.ItemEvent(), noevent.NoEvent(),minigameevent.MinigameEvent()]
     for _ in range((total+1)//len(tile)):
       random.shuffle(tile)
       event_list += tile
@@ -73,4 +73,5 @@ class Board:
         print()
         if r%2: print(' '*14 + '🌲🌳'*5*(self.col-1))
         else:   print('🌲🌳'*5*(self.col-1))
+
         print()
