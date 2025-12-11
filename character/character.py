@@ -14,7 +14,10 @@ class Character:
     self.max_hp = 100 * Character.levelhp
     self.hp =self.max_hp 
     self.ap = 10 * Character.levelap
-
+  
+  def minus_life(self) :
+    self.life -= 1 
+    
   @classmethod
   def make_char(cls,char_name) :
     return cls(char_name)
@@ -22,4 +25,5 @@ class Character:
     return (f'''{self.char_name}
 체력 - {self.hp}
 공격력 - {self.ap}''')
+
 
