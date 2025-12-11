@@ -3,7 +3,7 @@ import random
 class Monster(character.Character):
   @staticmethod
   def get_random_scale():
-    return random.randrange(90,111) * 0.1
+    return random.randrange(90,111) * 0.05
 
   def __init__(self, mon_name):
       super().__init__(mon_name)
@@ -25,3 +25,4 @@ class Monster(character.Character):
   def make_char(cls,mon_name):
 
     return cls(mon_name)
+
