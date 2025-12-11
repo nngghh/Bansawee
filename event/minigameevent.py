@@ -92,8 +92,8 @@ class MinigameEvent(event.Event):
     print('10턴만에 맞춰보세요!')
     for turn in range(1,11):
       time.sleep(0.5)
-      guess = int(input(f"[{turn}턴]\n1 이상 100 이하의 숫자를 맞춰보세요: "))
-      exception.valid_item(guess)
+      guess = (input(f"[{turn}턴]\n1 이상 100 이하의 숫자를 맞춰보세요: ")
+      guess = exception.valid_item(guess)
       while (guess<1 or guess>100):       guess = int(input("[오류] 1 이상 100 이하 자연수를 입력해주세요: "))
       time.sleep(0.5)
       if guess == answer:
@@ -119,5 +119,6 @@ class MinigameEvent(event.Event):
   def get_display_name(self):
 
     return '[🕹️미니게임🕹️]'
+
 
 
