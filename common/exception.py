@@ -103,7 +103,7 @@ class NotValidAnswer(Exception) :
 def valid_answer(ans) :
 
   try :
-    if guess.isdigit() == False :
+    if ans.isdigit() == False :
         raise NotValidSAnswer
 
   except Exception as e :
@@ -111,5 +111,6 @@ def valid_answer(ans) :
     re_ans = input('다시 입력해주세요: ')
     return valid_answer(re_ans)
   else :
-    return re_ans
+    return ans
+
 
