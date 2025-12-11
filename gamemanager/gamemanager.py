@@ -46,7 +46,9 @@ class GameManager :
       
       if current_pos > n*n :
         current_pos = n*n
-      
+      if hero.life == 0 :
+        print('모험을 실패하였습니다.)
+        return
       # 3) 보드판 주사위 굴리기
       time.sleep(1.5)
       board_input = input('주사위를 굴리시겠습니까?(Y/N):')
@@ -321,5 +323,6 @@ class GameManager :
         time.sleep(1.5)
         bossevent.BossEvent.start(hero)
         break
+
 
 
