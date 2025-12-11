@@ -7,7 +7,7 @@ class BossEvent(event.Event):
   """보스 칸 이벤트"""
   @staticmethod
   def start(player):
-    boss_monster = monster.Monster.make_char('드레곤')
+    boss_monster = monster.Monster.make_char('드래곤')
     print("보스", boss_monster)
 
     use_item_select = input('아이템을 사용하시겠습니까?(Y/N): ')
