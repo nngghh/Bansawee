@@ -14,7 +14,7 @@ class Fight(character.Character):
             for i in range(len(c)) :
                 c[i] = ''
         elif self.hero.roll >= 4 :
-            for i in range(self.hero.roll) :
+            for i in range(min(self.hero.roll,10)) :
                 c[i] = 'ca'
         is_c = random.choice(c)
         if is_c == 'ca' :
@@ -82,5 +82,6 @@ class Fight(character.Character):
 
 
             turn += 1
+
 
 
