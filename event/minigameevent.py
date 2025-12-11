@@ -117,3 +117,4 @@ class MinigameEvent(event.Event):
   def get_display_name(self):
 
     return '[🕹️미니게임🕹️]'
+
