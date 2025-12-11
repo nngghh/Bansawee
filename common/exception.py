@@ -94,4 +94,21 @@ def will_use_item(answer,character) :
     print('\n라고 할 뻔')
     time.sleep(0.8)
     re_answer = input('\n사용할 아이템을 입력해주세요: ')
+
     return will_use_item(re_answer,character)
+class NotValidAnswer(Exception) :
+  def __init__(self) :
+    super().__init__('입력이 올바르지 않습니다.')
+
+def valid_answer(ans) :
+
+  try :
+    if guess.isdigit() == False :
+        raise NotValidSAnswer
+
+  except Exception as e :
+    print(e)
+    re_ans = input('다시 입력해주세요: ')
+    return valid_answer(re_ans)
+  else :
+    pass
