@@ -7,7 +7,7 @@ class BattleEvent(event.Event):
   """전투 칸 이벤트"""
   @staticmethod
   def start(player):
-    mon_list = ['슬라임', '고블린', '곰', '오크 마법사', '스켈레톤', '늑대', '스톤 골렘', '불의 정령']
+    mon_list = ['슬라임', '고블린', '곰', '오크 전사', '스켈레톤', '늑대', '스톤 골렘', '불의 정령']
     mon_name = random.choice(mon_list)
     selected_monster = monster.Monster.make_char(mon_name)
     print(f"{selected_monster}\n이(가) 등장했습니다! 바로 전투로 들어갑니다.\n")
@@ -46,5 +46,6 @@ class BattleEvent(event.Event):
   def get_display_name(self):
 
     return '[ ⚔️ 전투 ⚔️ ]'
+
 
 
