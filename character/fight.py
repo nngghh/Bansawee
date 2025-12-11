@@ -75,10 +75,11 @@ class Fight(character.Character):
                 time.sleep(1.5)
                 print('\n라이프 1 감소')
                 time.sleep(1.5)
-                self.hero.life-=1  #라이프 전달받아야 함
+                self.hero.character.Chracter.minus_life()  
                 print('남은 라이프 {}'.format(self.hero.life))
                 # self.hero.hp =100 * character.Character.levelhp
                 break
 
 
             turn += 1
+
