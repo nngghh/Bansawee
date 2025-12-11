@@ -21,7 +21,8 @@ class Character:
   def __str__(self):
     return (f'''{self.char_name}
 체력 - {self.hp}
-# 공격력 - {self.ap}''')
+공격력 - {self.ap}''')
   def levelup(self):
     self.level += 1
+
     self.__init__(self.char_name)
