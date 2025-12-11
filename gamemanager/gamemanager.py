@@ -56,7 +56,7 @@ class GameManager :
       # 4) 주사위 수만큼 보드판 이동
       current_pos = min(current_pos + board_dice_roll, game_board.total_tiles - 1)
       current_board = game_board.display(current_pos)
-      current_event = "[ ⚔️ 전투 ⚔️ ]"#game_board.get_event(current_pos).get_display_name()
+      current_event = game_board.get_event(current_pos).get_display_name()
 
 
       # 5) 전투칸 이벤트 발생
@@ -321,4 +321,5 @@ class GameManager :
         time.sleep(1.5)
         bossevent.BossEvent.start(hero)
         break
+
 
